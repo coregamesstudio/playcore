@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayCore - Gratis Spil Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"></script>
+</head>
+<body>
+    <!-- Header med annoncer -->
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1>🎮 PlayCore</h1>
+            <p>Spil gratis online spil og have det sjovt!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <span class="logo">PlayCore</span>
+            <ul>
+                <li><a href="#home" onclick="showHome()">Hjem</a></li>
+                <li><a href="#games">Spil</a></li>
+                <li><a href="#about">Om Os</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home-section" class="section active">
+            <div class="hero">
+                <h2>Velkommen til PlayCore!</h2>
+                <p>Spil dine yndlings spil, helt gratis. Vælg et spil nedenfor og start øjeblikkeligt!</p>
+                <button onclick="scrollToGames()" class="cta-button">Start nu</button>
+            </div>
+        </section>
+
+        <!-- Games Grid -->
+        <section id="games-section" class="section">
+            <h2>Vores Spil</h2>
+            <div class="games-grid">
+                <!-- Flappy Bird Style -->
+                <div class="game-card">
+                    <h3>🐦 Flappy Fly</h3>
+                    <p>Fly gennem hindrene uden at ramme dem!</p>
+                    <button onclick="loadGame('flappy')">Spil Nu</button>
+                </div>
+
+                <!-- Puslespil -->
+                <div class="game-card">
+                    <h3>🧩 Puzzle Master</h3>
+                    <p>Løs puslespil og test dit logik!</p>
+                    <button onclick="loadGame('puzzle')">Spil Nu</button>
+                </div>
+
+                <!-- Quiz -->
+                <div class="game-card">
+                    <h3>🧠 Quiz Challenge</h3>
+                    <p>Svar på spørgsmål og få højeste score!</p>
+                    <button onclick="loadGame('quiz')">Spil Nu</button>
+                </div>
+
+                <!-- Klicker Spil -->
+                <div class="game-card">
+                    <h3>🖱️ Click Tycoon</h3>
+                    <p>Klik dig til formue! Idle spil.</p>
+                    <button onclick="loadGame('clicker')">Spil Nu</button>
+                </div>
+
+                <!-- Memory Spil -->
+                <div class="game-card">
+                    <h3>🎴 Memory Match</h3>
+                    <p>Find matchende kort og træn din hukommelse!</p>
+                    <button onclick="loadGame('memory')">Spil Nu</button>
+                </div>
+
+                <!-- Snake -->
+                <div class="game-card">
+                    <h3>🐍 Snake Attack</h3>
+                    <p>Det klassiske snake spil. Hvor længe kan du blive?</p>
+                    <button onclick="loadGame('snake')">Spil Nu</button>
+                </div>
+
+                <!-- Platformer -->
+                <div class="game-card">
+                    <h3>🚀 Jump Hero</h3>
+                    <p>Spring og saml ting. Undgå fjenderne!</p>
+                    <button onclick="loadGame('platformer')">Spil Nu</button>
+                </div>
+
+                <!-- Breakout -->
+                <div class="game-card">
+                    <h3>🔶 Breakout Blast</h3>
+                    <p>Slå bolden med padlen og ødelæg alle klodser!</p>
+                    <button onclick="loadGame('breakout')">Spil Nu</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Player -->
+        <section id="game-section" class="section" style="display:none;">
+            <button onclick="backToGames()" class="back-button">← Tilbage til spil</button>
+            <div class="game-container">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+            </div>
+            
+            <!-- Annoncer omkring spillet -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+                     data-ad-slot="9876543210"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <div id="game-info"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="section">
+            <h2>Om PlayCore</h2>
+            <p>PlayCore er en gratis spil-portal med mange sjove browser-baserede spil. Ingen downloads, ingen installation - bare spil direkte i din browser!</p>
+            <p>Vi elsker at gøre gaming tilgængeligt for alle. Kom tilbage hver dag for nye spil og udfordringer!</p>
+        </section>
+    </main>
+
+    <!-- Footer Annoncer -->
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+             data-ad-slot="5555555555"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PlayCore. Alle rettigheder forbeholdt.</p>
+        <p>Contact: contact@playcore.com</p>
+    </footer>
+
+    <script src="games.js"></script>
+</body>
+</html>
